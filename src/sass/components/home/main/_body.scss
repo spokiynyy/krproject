@@ -1,0 +1,159 @@
+.film-list-home,
+.film-list-lib {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.film-item {
+  width: 394px;
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.film-item:hover {
+  transform: scale(1.03);
+}
+
+.film-card-section {
+  padding-bottom: 40px;
+  padding-top: 20px;
+}
+
+.film-img {
+  width: auto;
+  height: auto;
+  border-radius: 10px;
+}
+
+.film-name {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 116%;
+  margin-top: 3px;
+}
+
+.film-tag {
+  line-height: 133%;
+  color: #ff6b08;
+}
+
+/* mobile */
+/* @media screen and (min-width: 480px) {
+	.container {
+	  width: 480px;
+	}
+ } */
+
+/* tablet */
+
+@media screen and (min-width: 768px) {
+  .film-img {
+    height: 504px;
+    width: auto;
+  }
+  .film-list-home,
+  .film-list-lib {
+    gap: 32px;
+    justify-content: center;
+  }
+
+  .film-item {
+    width: 336px;
+  }
+
+  .film-name {
+    line-height: 133%;
+  }
+  .film-card-section {
+    padding-bottom: 60px;
+    padding-top: 20px;
+  }
+}
+
+/* desctop */
+
+@media screen and (min-width: 1280px) {
+  .film-img {
+    width: auto;
+    height: 504px;
+  }
+  .film-list-home,
+  .film-list-lib {
+    row-gap: 32px;
+    column-gap: 16px;
+  }
+  .film-name {
+    font-size: 16px;
+    line-height: 120%;
+    transition: color 300ms cubic-bezier(0.4, 0, 0.2, 1);
+    main.dark-theme & {
+      color: #fff;
+    }
+  }
+  .film-tag {
+    line-height: 120%;
+  }
+}
+
+/* Pagination */
+
+.pagination-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  align-items: center;
+
+  @media screen and (min-width: 320px) and (max-width: 767px) {
+    padding: 40px 0;
+  }
+
+  @media screen and (min-width: 768px) {
+    padding: 50px 0 60px 0;
+  }
+}
+
+.pagination-button:not(:last-child),
+.dots {
+  margin-right: 16px;
+}
+
+.pagination-button {
+  padding: 0;
+  background-color: #fff;
+  border: none;
+  color: #000;
+  cursor: pointer;
+  font-family: Roboto;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 1.333;
+}
+
+.pagination--current {
+  width: 40px;
+  height: 40px;
+  border-radius: 5px;
+  background-color: #ff6b08;
+  color: #fff;
+}
+
+.dots,
+.first-button,
+.last-button {
+  @media screen and (max-width: 767px) {
+    display: none;
+  }
+}
+
+.arrow-left,
+.arrow-right {
+  width: 40px;
+  height: 40px;
+  border-radius: 5px;
+  background-color: #f7f7f7;
+  stroke: #000;
+  fill: transparent;
+}
